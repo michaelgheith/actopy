@@ -9,7 +9,6 @@ class worker(threading.Thread):
         self.sock = sock
 
     def run(self):
-        #get i/o streams
 
         print "worker thread has started"
         print threading.current_thread()
