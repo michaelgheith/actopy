@@ -3,7 +3,7 @@ import Worker
 
 
 
-class server():
+class Server():
     def __init__(self):
         self.q_len = 5
         self.port = bluetooth.PORT_ANY
@@ -57,7 +57,7 @@ class server():
 
 
 if __name__ == "__main__":
-    multithreaded_server = server()
+    multithreaded_server = Server()
     multithreaded_server.run()
     #multithreaded_server.kill_server()
 
