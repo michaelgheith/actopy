@@ -1,6 +1,6 @@
 import bluetooth
 import Worker
-
+import sys
 
 class Server():
     def __init__(self):
@@ -28,11 +28,12 @@ class Server():
         self.advertise_service(name="FooBar Service", uuid="1e0ca4ea-299d-4335-93eb-27fcfe7fa848")
         self.accept_connections()
 
-    def kill_server(self): 
+    def kill(self): 
         self.server_sock.close()
+        sys.exit()
 
 
 if __name__ == "__main__":
     multithreaded_server = Server()
     multithreaded_server.run()
-    #multithreaded_server.kill_server()
+    #multithreaded_server.kill()
