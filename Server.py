@@ -15,12 +15,12 @@ class Server():
         print "listening on port %d" % self.port
 
     def advertise_service(self, name, uuid):
-        bluetooth.advertise_service( self.server_sock, name, uuid )
+        bluetooth.advertise_service(self.server_sock, name, uuid)
 
     def accept_connections(self):
         while True:
             client_sock, address = self.server_sock.accept()
-            print "Accepted connection from ",address
+            print "Accepted connection from %s" % address
             Worker.worker(client_sock).start()  #Spawns the worker thread.
 
     def run(self):
