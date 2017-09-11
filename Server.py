@@ -37,6 +37,9 @@ class Server():
 
 
 if __name__ == "__main__":
-    multithreaded_server = Server(name="FooBar Service", uuid="1e0ca4ea-299d-4335-93eb-27fcfe7fa848")
-    multithreaded_server.run()
-    #multithreaded_server.kill()
+    try:
+        multithreaded_server = Server(name="FooBar Service", uuid="1e0ca4ea-299d-4335-93eb-27fcfe7fa848")
+        multithreaded_server.run()
+    except KeyboardInterrupt:
+        print("\nShutting down the server.")
+        multithreaded_server.kill()
