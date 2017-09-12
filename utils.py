@@ -37,8 +37,8 @@ def lookup_name(name):  #provide a bluetooth address and it will see if it exist
 
 if __name__ == "__main__":
     inquire()
-    print lookup_name("B8:27:EB:BA:10:CD")  #pi client address
-    print lookup_name("68:09:27:77:B4:7A")  #iphone address
+    #print lookup_name("B8:27:EB:BA:10:CD")  #pi client address
+    #print lookup_name("68:09:27:77:B4:7A")  #iphone address
 
 
 

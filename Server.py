@@ -25,7 +25,7 @@ class Server():
     def accept_connections(self):
         while True:
             client_sock, address = self.server_sock.accept()
-            print "Accepted connection from %s" % address
+            print "Accepted connection from", address
             Worker.worker(client_sock).start()  #Spawns the worker thread.
 
     def run(self):
