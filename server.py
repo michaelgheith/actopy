@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import bluetooth
-import Worker
+import worker
 import sys
 
 
