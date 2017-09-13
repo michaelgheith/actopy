@@ -5,7 +5,7 @@ import time
 
 
 #This is what gets spawned by the server when it receives a connection.
-class worker(threading.Thread):
+class Worker(threading.Thread):
     def __init__(self, sock):
         threading.Thread.__init__(self)
         self.sock = sock
