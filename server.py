@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
+import sys
 import bluetooth
 import worker
-import sys
 
 
 class Server():
