@@ -38,10 +38,10 @@ ExecStart=/usr/lib/bluetooth/bluetoothd --compat
 
 ## Random
 To check the status of your bluetooth device:<br/>
-systemctl status bluetooth
+$ systemctl status bluetooth
 
 To get the MAC address of your device:<br/>
-bluetoothctl list 
+$ bluetoothctl list 
 
 ## Resources
 * http://people.csail.mit.edu/rudolph/Teaching/Articles/PartOfBTBook.pdf
