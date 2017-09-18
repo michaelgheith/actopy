@@ -1,10 +1,11 @@
 # actopy
 This is a multithreaded python bluetooth server.  To be used with the actopy client.  Inspired and created on the Raspberry Pi 3.  Created by Michael Gheith @ Juxtaploitation.
 
-https://github.com/michaelgheith/actopy
+[https://github.com/michaelgheith/actopy](https://github.com/michaelgheith/actopy)
 
 Email:  michael@juxtaploitation.com
-Website:  https://www.juxtaploitation.com/
+Website:  [https://www.juxtaploitation.com/](https://www.juxtaploitation.com/)
+
 
 ## About
 This provides a basic framework for you to have multiple bluetooth clients served by a single server instance; similiar to an HTTP server.  Usage is up to your imagination, be creative!  The server will broadcast a service name, along with a uuid.  The clients will look for this service, and will try to establish a connection to the server.  The server machine must be in discoverable mode for this to work (see bluetoothctl section), and the bluetooth daemon needs to be run in compatibility mode (see Other section).
@@ -43,7 +44,7 @@ To get the MAC address of your device:
 bluetoothctl list 
 
 ## Resources
-http://people.csail.mit.edu/rudolph/Teaching/Articles/PartOfBTBook.pdf
-https://people.csail.mit.edu/albert/bluez-intro/index.html
-https://github.com/karulis/pybluez/blob/master/examples/simple/sdp-browse.py
-https://learn.adafruit.com/install-bluez-on-the-raspberry-pi/installation
+[http://people.csail.mit.edu/rudolph/Teaching/Articles/PartOfBTBook.pdf](http://people.csail.mit.edu/rudolph/Teaching/Articles/PartOfBTBook.pdf)
+[https://people.csail.mit.edu/albert/bluez-intro/index.html](https://people.csail.mit.edu/albert/bluez-intro/index.html)
+[https://github.com/karulis/pybluez/blob/master/examples/simple/sdp-browse.py](https://github.com/karulis/pybluez/blob/master/examples/simple/sdp-browse.py)
+[https://learn.adafruit.com/install-bluez-on-the-raspberry-pi/installation](https://learn.adafruit.com/install-bluez-on-the-raspberry-pi/installation)
