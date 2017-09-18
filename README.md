@@ -16,7 +16,7 @@ https://github.com/karulis/pybluez
 
 ## bluetoothctl
 This is a CLI for you to control your bluetooth device.  Do the following to make your device discoverable manually:
-$ bluetoothctl
+$ bluetoothctl<br/>
 [bluetooth]# help<br/>
 [bluetooth]# discoverable yes<br/>
 [bluetooth]# quit<br/>
