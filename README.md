@@ -31,16 +31,16 @@ and then make sure you have the following set:<br/>
 DiscoverableTimeout = 0
 
 ## Other
-In order for this to work on the Raspberry Pi, you need to do the following:
-sudo vim /lib/systemd/system/bluetooth.service
-Now add --compat to the ExecStart line like the following:
+In order for this to work on the Raspberry Pi, you need to do the following:<br/>
+sudo vim /lib/systemd/system/bluetooth.service<br/>
+Now add --compat to the ExecStart line like the following:<br/>
 ExecStart=/usr/lib/bluetooth/bluetoothd --compat
 
 ## Random
-To check the status of your bluetooth device:
+To check the status of your bluetooth device:<br/>
 systemctl status bluetooth
 
-To get the MAC address of your device:
+To get the MAC address of your device:<br/>
 bluetoothctl list 
 
 ## Resources
