@@ -23,11 +23,11 @@ $ bluetoothctl<br/>
 
 Or
 
-sudo hciconfig hci0 piscan
+$ sudo hciconfig hci0 piscan
 
-Or if you want to have your device always in discoverable mode and not timeout after so many seconds we can modify the main bluetooth configuration file:
+Or if you want to have your device always in discoverable mode and not timeout after so many seconds we can modify the main bluetooth configuration file:<br/>
 vim /etc/bluetooth/main.conf  
-and then make sure you have the following set:
+and then make sure you have the following set:<br/>
 DiscoverableTimeout = 0
 
 ## Other
