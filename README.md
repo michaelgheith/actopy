@@ -1,10 +1,10 @@
 # actopy
 This is a multithreaded python bluetooth server.  To be used with the actopy client.  Inspired and created on the Raspberry Pi 3.  Created by Michael Gheith @ Juxtaploitation.
 
-[https://github.com/michaelgheith/actopy](https://github.com/michaelgheith/actopy)
+https://github.com/michaelgheith/actopy
 
-Email:  michael@juxtaploitation.com
-Website:  [https://www.juxtaploitation.com/](https://www.juxtaploitation.com/)
+* Email:  michael@juxtaploitation.com
+* Website:  https://www.juxtaploitation.com/
 
 
 ## About
@@ -16,10 +16,10 @@ https://github.com/karulis/pybluez
 
 ## bluetoothctl
 This is a CLI for you to control your bluetooth device.  Do the following to make your device discoverable manually:
-$ bluetoothctl
-[bluetooth]# help
-[bluetooth]# discoverable yes
-[bluetooth]# quit
+* $ bluetoothctl
+* [bluetooth]# help
+* [bluetooth]# discoverable yes
+* [bluetooth]# quit
 
 Or
 
@@ -44,7 +44,7 @@ To get the MAC address of your device:
 bluetoothctl list 
 
 ## Resources
-[http://people.csail.mit.edu/rudolph/Teaching/Articles/PartOfBTBook.pdf](http://people.csail.mit.edu/rudolph/Teaching/Articles/PartOfBTBook.pdf)
-[https://people.csail.mit.edu/albert/bluez-intro/index.html](https://people.csail.mit.edu/albert/bluez-intro/index.html)
-[https://github.com/karulis/pybluez/blob/master/examples/simple/sdp-browse.py](https://github.com/karulis/pybluez/blob/master/examples/simple/sdp-browse.py)
-[https://learn.adafruit.com/install-bluez-on-the-raspberry-pi/installation](https://learn.adafruit.com/install-bluez-on-the-raspberry-pi/installation)
+* http://people.csail.mit.edu/rudolph/Teaching/Articles/PartOfBTBook.pdf
+* https://people.csail.mit.edu/albert/bluez-intro/index.html
+* https://github.com/karulis/pybluez/blob/master/examples/simple/sdp-browse.py
+* https://learn.adafruit.com/install-bluez-on-the-raspberry-pi/installation
