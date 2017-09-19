@@ -8,14 +8,14 @@ https://github.com/michaelgheith/actopy
 
 
 ## About
-This provides a basic framework for you to have multiple bluetooth clients served by a single server instance; similiar to an HTTP server.  Usage is up to your imagination, be creative!  The server will broadcast a service name, along with a uuid.  The clients will look for this service, and will try to establish a connection to the server.  The server machine must be in discoverable mode for this to work (see bluetoothctl section), and the bluetooth daemon needs to be run in compatibility mode (see Other section).
+This provides a basic framework for you to have multiple bluetooth clients served by a single server instance; similiar to an HTTP server.  Usage is up to your imagination, be creative!  The server will broadcast a service name, along with a uuid.  The clients will look for this service, and will try to establish a connection to the server.  The server machine must be in [discoverable mode](#Discoverable Mode) for this to work, and the bluetooth daemon needs to be run in [compatibility mode](#Compatibility Mode).
 
 ## Dependencies
 You will need to install pybluez so we can import bluetooth:<br/>
 https://github.com/karulis/pybluez
 
-## bluetoothctl
-This is a CLI for you to control your bluetooth device.  Do the following to make your device discoverable manually:
+## Discoverable Mode
+This is a CLI tool for you to control your bluetooth device.  Do the following to make your device discoverable manually:
 $ bluetoothctl<br/>
 [bluetooth]# help<br/>
 [bluetooth]# discoverable yes<br/>
@@ -30,8 +30,8 @@ vim /etc/bluetooth/main.conf
 and then make sure you have the following set:<br/>
 DiscoverableTimeout = 0
 
-## Other
-In order for this to work on the Raspberry Pi, you need to do the following:<br/>
+## Compatibility Mode
+In order for the pybluez library to work on the Raspberry Pi, you need to do the following:<br/>
 sudo vim /lib/systemd/system/bluetooth.service<br/>
 Now add --compat to the ExecStart line like the following:<br/>
 ExecStart=/usr/lib/bluetooth/bluetoothd --compat
