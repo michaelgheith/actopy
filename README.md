@@ -10,6 +10,9 @@ https://github.com/michaelgheith/actopy
 ## About
 This provides a basic framework for you to have multiple bluetooth clients served by a single server instance; similiar to an HTTP server.  Usage is up to your imagination, be creative!  The server will broadcast a service name, along with a uuid.  The clients will look for this service, and will try to establish a connection to the server.  The server machine must be in [discoverable mode](#user-content-discoverable-mode) for this to work, and the bluetooth daemon needs to be run in [compatibility mode](#user-content-compatibility-mode).
 
+## Usage
+$ python server.py --name=my_service_name --uuid=1e0ca4ea-299d-4335-93eb-27fcfe7fa848
+
 ## Dependencies
 You will need to install pybluez so we can import bluetooth:<br/>
 https://github.com/karulis/pybluez
