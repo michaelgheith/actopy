@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys
+import argparse
 import bluetooth
 import worker
 
@@ -39,8 +40,20 @@ class Server():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="a multithreaded bluetooth server")
+    parser.add_argument("-v", "--verbose", help="turn on verbose mode", action="store_true")
+    parser.add_argument("-n", "--name", help="specify a service name", default="FooBar Service")
+    parser.add_argument("-u", "--uuid", help="specify a uuid", default="1e0ca4ea-299d-4335-93eb-27fcfe7fa848")
+    args = parser.parse_args()
+
+    if args.verbose:
+        print "Verbose mode turned on."
+        print "Running '{}'".format(__file__)
+        print "using service name %s" % args.name
+        print "using uuid %s" % args.uuid
+
     try:
-        multithreaded_server = Server(name="FooBar Service", uuid="1e0ca4ea-299d-4335-93eb-27fcfe7fa848")
+        multithreaded_server = Server(name=args.name, uuid=args.uuid)
         multithreaded_server.run()
     except KeyboardInterrupt:
         print("\nShutting down the server.")
