@@ -15,7 +15,7 @@ You will need to install pybluez so we can import bluetooth:<br/>
 https://github.com/karulis/pybluez
 
 ## Discoverable Mode
-This is a CLI tool for you to control your bluetooth device.  Do the following to make your device discoverable manually:
+This is a CLI tool for you to control your bluetooth device.  Do the following to make your device discoverable manually:<br/>
 $ bluetoothctl<br/>
 [bluetooth]# help<br/>
 [bluetooth]# discoverable yes<br/>
