@@ -4,6 +4,7 @@ import sys
 import argparse
 import bluetooth
 import worker
+import utils
 
 
 class Server():
@@ -18,7 +19,7 @@ class Server():
         self.server_sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
         self.server_sock.bind(("", self.port))
         self.server_sock.listen(self.q_len)  #Queue up as many as 5 connect requests.
-        print "listening on port %d" % self.port
+        utils.log_stdout("listening on port %d" % self.port)
 
     def advertise_service(self):
         bluetooth.advertise_service(self.server_sock, self.name, self.uuid)
@@ -26,7 +27,7 @@ class Server():
     def accept_connections(self):
         while True:
             client_sock, address = self.server_sock.accept()
-            print "Accepted connection from", address
+            utils.log_stdout("Accepted connection from", address)
             worker.Worker(client_sock).start()  #Spawns the worker thread.
 
     def run(self):
@@ -47,14 +48,14 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.verbose:
-        print "Verbose mode turned on."
-        print "Running '{}'".format(__file__)
-        print "using service name %s" % args.name
-        print "using uuid %s" % args.uuid
+        utils.log_stdout("running {}".format(__file__))
+        utils.log_stdout("verbose mode turned on")
+        utils.log_stdout("using service name %s" % args.name)
+        utils.log_stdout("using uuid %s" % args.uuid)
 
     try:
         multithreaded_server = Server(name=args.name, uuid=args.uuid)
         multithreaded_server.run()
     except KeyboardInterrupt:
-        print("\nShutting down the server.")
+        utils.log_stdout("shutting down the server")
         multithreaded_server.kill()
