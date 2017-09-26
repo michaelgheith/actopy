@@ -2,6 +2,7 @@
 
 import threading
 import time
+import utils
 
 
 #This is what gets spawned by the server when it receives a connection.
@@ -11,10 +12,10 @@ class Worker(threading.Thread):
         self.sock = sock
 
     def run(self):
-        print "Worker thread %s has started." % threading.current_thread()
+        utils.log_stdout("worker thread %s has started." % threading.current_thread())
         
         data = self.sock.recv(1024)
-        print "Received [%s]" % data
+        utils.log_stdout("received [%s]" % data)
 
         self.sock.send("This note is from the worker thread %s on the server!" % threading.current_thread())
 
