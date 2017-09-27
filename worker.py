@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import threading
-import time
+import json
 import utils
 
 
@@ -18,6 +18,8 @@ class Worker(threading.Thread):
         data = self.sock.recv(1024)
         utils.log_stdout("received data from device %s:  [%s]" % (self.address[0], data))
 
-        self.sock.send("This note is from worker %s on the server!" % threading.current_thread().getName())
+        response = {"success": 200, "msg": "This note is from worker %s on the server!" % threading.current_thread().getName()}
+
+        self.sock.send(json.dumps(response))
 
         self.sock.close()
