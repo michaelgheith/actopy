@@ -16,7 +16,7 @@ class Worker(threading.Thread):
         utils.log_stdout("worker %s has started." % threading.current_thread().getName())
         
         data = self.sock.recv(1024)
-        utils.log_stdout("received data from device %s:  [%s]" % (self.address[0], data))
+        utils.log_stdout("received data from device %s on %s:  [%s]" % (self.address[0], threading.current_thread().getName(), data))
 
         response = {"status": 200, "msg": "This note is from worker %s on the server!" % threading.current_thread().getName()}
 
