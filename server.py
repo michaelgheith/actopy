@@ -9,7 +9,7 @@ import utils
 
 class Server():
     def __init__(self, name, uuid):
-        self.q_len = 5
+        self.q_len = 3
         self.port = bluetooth.PORT_ANY
         self.server_sock = None
         self.name = name
