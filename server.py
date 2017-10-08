@@ -3,6 +3,7 @@
 import sys
 import argparse
 import bluetooth
+import config
 import worker
 import utils
 
@@ -48,6 +49,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.verbose:
+        config.logging = True
         utils.log_stdout("running {}".format(__file__))
         utils.log_stdout("verbose mode turned on")
         utils.log_stdout("using service name %s" % args.name)

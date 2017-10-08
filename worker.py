@@ -2,6 +2,7 @@
 
 import threading
 import json
+import config
 import utils
 
 
@@ -13,7 +14,8 @@ class Worker(threading.Thread):
         self.address = address
 
     def run(self):
-        utils.log_stdout("worker %s has started." % threading.current_thread().getName())
+        if config.logging:
+            utils.log_stdout("worker %s has started." % threading.current_thread().getName())
         
         data = self.sock.recv(1024)
         utils.log_stdout("received data from device %s on %s:  [%s]" % (self.address[0], threading.current_thread().getName(), data))
